@@ -23,6 +23,7 @@ const int kHaarOptions =  CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 @property (nonatomic, strong) AVCaptureDeviceInput * deviceInput;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 @property (nonatomic, assign) NSInteger camera;
+@property (nonatomic, assign) cv::CascadeClassifier faceCascade;
 @end
 
 @implementation ViewController
@@ -55,7 +56,8 @@ const int kHaarOptions =  CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     // Load the face Haar cascade from resources
     NSString *faceCascadePath = [[NSBundle mainBundle] pathForResource:kFaceCascadeFilename ofType:@"xml"];
     
-    if (!_faceCascade.load([faceCascadePath UTF8String])) {
+    self.faceCascade = cv::CascadeClassifier([faceCascadePath UTF8String]);
+    if (!self.faceCascade.load([faceCascadePath UTF8String])) {
         NSLog(@"Could not load face cascade: %@", faceCascadePath);
     }
 
@@ -166,7 +168,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
         
         cv::Mat mat(videoRect.size.height, videoRect.size.width, CV_8UC4, baseaddress, 0);
         
-//        [self processFrame:mat videoRect:videoRect videoOrientation:videoOrientation];
+        [self processFrame:mat videoRect:videoRect videoOrientation:videoOrientation];
         
         CVPixelBufferUnlockBaseAddress(pixelBuffer, 0);
     }
@@ -206,7 +208,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     // Detect faces
     std::vector<cv::Rect> faces;
     
-    _faceCascade.detectMultiScale(mat, faces, 1.1, 2, kHaarOptions, cv::Size(60, 60));
+    self.faceCascade.detectMultiScale(mat, faces, 1.1, 2, kHaarOptions, cv::Size(60, 60));
     
     // Dispatch updating of face markers to main queue
     dispatch_sync(dispatch_get_main_queue(), ^{
