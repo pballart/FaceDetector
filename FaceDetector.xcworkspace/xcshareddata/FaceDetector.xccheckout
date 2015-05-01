@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>00CCFA9E-BD23-4648-9A4C-6F90B200946B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FaceDetector</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1E6BDEE6C9B345FA3CF5DA578E5B67C95FC6382B</key>
+		<string>https://github.com/pballart/FaceDetector.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FaceDetector.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1E6BDEE6C9B345FA3CF5DA578E5B67C95FC6382B</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pballart/FaceDetector.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1E6BDEE6C9B345FA3CF5DA578E5B67C95FC6382B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1E6BDEE6C9B345FA3CF5DA578E5B67C95FC6382B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FaceDetector</string>
+		</dict>
+	</array>
+</dict>
+</plist>

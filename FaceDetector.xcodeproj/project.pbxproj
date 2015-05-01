@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F90A7BE1AF3D870006BD35C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5F90A7BD1AF3D870006BD35C /* README.md */; };
 		5FFCC4321AF2981800EAF299 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCC4311AF2981800EAF299 /* main.m */; };
 		5FFCC4351AF2981800EAF299 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCC4341AF2981800EAF299 /* AppDelegate.mm */; };
 		5FFCC4381AF2981800EAF299 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCC4371AF2981800EAF299 /* ViewController.mm */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		5F42C430F97CC9D79ADE3BB7 /* Pods-FaceDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDetector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceDetector/Pods-FaceDetector.debug.xcconfig"; sourceTree = "<group>"; };
+		5F90A7BD1AF3D870006BD35C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5FFCC42C1AF2981800EAF299 /* FaceDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FFCC4301AF2981800EAF299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FFCC4311AF2981800EAF299 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		5FFCC42E1AF2981800EAF299 /* FaceDetector */ = {
 			isa = PBXGroup;
 			children = (
+				5F90A7BD1AF3D870006BD35C /* README.md */,
 				5FFCC4331AF2981800EAF299 /* AppDelegate.h */,
 				5FFCC4341AF2981800EAF299 /* AppDelegate.mm */,
 				5FFCC4361AF2981800EAF299 /* ViewController.h */,
@@ -291,6 +294,7 @@
 			files = (
 				5FFCC45C1AF2A8FC00EAF299 /* UIImage+OpenCV.mm in Sources */,
 				5FFCC4381AF2981800EAF299 /* ViewController.mm in Sources */,
+				5F90A7BE1AF3D870006BD35C /* README.md in Sources */,
 				5FFCC4351AF2981800EAF299 /* AppDelegate.mm in Sources */,
 				5FFCC4321AF2981800EAF299 /* main.m in Sources */,
 			);
