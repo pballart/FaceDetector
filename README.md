@@ -12,5 +12,5 @@ Basically, you open the app and you can switch between back and front camera. Wh
 Feel free to use the code and improve it if you want!
 
 ## Acknowledgements
-Original idea: https://github.com/shantnu/Webcam-Face-Detect
-Original source: https://github.com/aptogo/FaceTracker
+- Original idea: https://github.com/shantnu/Webcam-Face-Detect
+- Original source: https://github.com/aptogo/FaceTracker
