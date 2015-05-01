@@ -5,6 +5,12 @@
 //  Created by Pau Ballart Godoy on 30/4/15.
 //  Copyright (c) 2015 SolArt Apps. All rights reserved.
 //
+//  Permission is given to use this source code file without charge in any
+//  project, commercial or otherwise, entirely at your risk, with the condition
+//  that any redistribution (in part or whole) of source code must retain
+//  this copyright and permission notice. Attribution in compiled projects is
+//  appreciated but not required.
+//
 
 #import "ViewController.h"
 #import "UIImage+OpenCV.h"
@@ -208,7 +214,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     // Detect faces
     std::vector<cv::Rect> faces;
     
-    self.faceCascade.detectMultiScale(mat, faces, 1.1, 2, kHaarOptions, cv::Size(60, 60));
+    self.faceCascade.detectMultiScale(mat, faces, 1.3, 2, kHaarOptions, cv::Size(30, 30));
     
     // Dispatch updating of face markers to main queue
     dispatch_sync(dispatch_get_main_queue(), ^{
