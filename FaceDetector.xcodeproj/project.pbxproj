@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5FFCC4321AF2981800EAF299 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCC4311AF2981800EAF299 /* main.m */; };
-		5FFCC4351AF2981800EAF299 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCC4341AF2981800EAF299 /* AppDelegate.m */; };
-		5FFCC4381AF2981800EAF299 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCC4371AF2981800EAF299 /* ViewController.m */; };
+		5FFCC4351AF2981800EAF299 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCC4341AF2981800EAF299 /* AppDelegate.mm */; };
+		5FFCC4381AF2981800EAF299 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCC4371AF2981800EAF299 /* ViewController.mm */; };
 		5FFCC43B1AF2981800EAF299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FFCC4391AF2981800EAF299 /* Main.storyboard */; };
 		5FFCC43D1AF2981800EAF299 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FFCC43C1AF2981800EAF299 /* Images.xcassets */; };
 		5FFCC4401AF2981800EAF299 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFCC43E1AF2981800EAF299 /* LaunchScreen.xib */; };
 		5FFCC44C1AF2981800EAF299 /* FaceDetectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCC44B1AF2981800EAF299 /* FaceDetectorTests.m */; };
+		5FFCC4591AF2A8ED00EAF299 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5FFCC4581AF2A8ED00EAF299 /* haarcascade_frontalface_default.xml */; };
+		5FFCC45C1AF2A8FC00EAF299 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCC45B1AF2A8FC00EAF299 /* UIImage+OpenCV.mm */; };
+		607DA874DDAD018F17BDDFF1 /* libPods-FaceDetector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA5E771F744A08FE4E19FEE /* libPods-FaceDetector.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +30,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F42C430F97CC9D79ADE3BB7 /* Pods-FaceDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDetector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceDetector/Pods-FaceDetector.debug.xcconfig"; sourceTree = "<group>"; };
 		5FFCC42C1AF2981800EAF299 /* FaceDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FFCC4301AF2981800EAF299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FFCC4311AF2981800EAF299 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FFCC4331AF2981800EAF299 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5FFCC4341AF2981800EAF299 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5FFCC4341AF2981800EAF299 /* AppDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		5FFCC4361AF2981800EAF299 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5FFCC4371AF2981800EAF299 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5FFCC4371AF2981800EAF299 /* ViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		5FFCC43A1AF2981800EAF299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FFCC43C1AF2981800EAF299 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5FFCC43F1AF2981800EAF299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5FFCC4451AF2981800EAF299 /* FaceDetectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDetectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FFCC44A1AF2981800EAF299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FFCC44B1AF2981800EAF299 /* FaceDetectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceDetectorTests.m; sourceTree = "<group>"; };
+		5FFCC4551AF299E500EAF299 /* FaceDetector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceDetector-Prefix.pch"; sourceTree = "<group>"; };
+		5FFCC4581AF2A8ED00EAF299 /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		5FFCC45A1AF2A8FC00EAF299 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		5FFCC45B1AF2A8FC00EAF299 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		DAA5E771F744A08FE4E19FEE /* libPods-FaceDetector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FaceDetector.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFCF071C95AFFBEDC5C2B8B7 /* Pods-FaceDetector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDetector.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceDetector/Pods-FaceDetector.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607DA874DDAD018F17BDDFF1 /* libPods-FaceDetector.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +77,8 @@
 				5FFCC42E1AF2981800EAF299 /* FaceDetector */,
 				5FFCC4481AF2981800EAF299 /* FaceDetectorTests */,
 				5FFCC42D1AF2981800EAF299 /* Products */,
+				E29891E2749AEC0CE18F7E48 /* Pods */,
+				A588A5A99BC02B0A2EA26572 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,12 +95,15 @@
 			isa = PBXGroup;
 			children = (
 				5FFCC4331AF2981800EAF299 /* AppDelegate.h */,
-				5FFCC4341AF2981800EAF299 /* AppDelegate.m */,
+				5FFCC4341AF2981800EAF299 /* AppDelegate.mm */,
 				5FFCC4361AF2981800EAF299 /* ViewController.h */,
-				5FFCC4371AF2981800EAF299 /* ViewController.m */,
+				5FFCC4371AF2981800EAF299 /* ViewController.mm */,
+				5FFCC45A1AF2A8FC00EAF299 /* UIImage+OpenCV.h */,
+				5FFCC45B1AF2A8FC00EAF299 /* UIImage+OpenCV.mm */,
 				5FFCC4391AF2981800EAF299 /* Main.storyboard */,
 				5FFCC43C1AF2981800EAF299 /* Images.xcassets */,
 				5FFCC43E1AF2981800EAF299 /* LaunchScreen.xib */,
+				5FFCC4581AF2A8ED00EAF299 /* haarcascade_frontalface_default.xml */,
 				5FFCC42F1AF2981800EAF299 /* Supporting Files */,
 			);
 			path = FaceDetector;
@@ -98,6 +114,7 @@
 			children = (
 				5FFCC4301AF2981800EAF299 /* Info.plist */,
 				5FFCC4311AF2981800EAF299 /* main.m */,
+				5FFCC4551AF299E500EAF299 /* FaceDetector-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +136,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A588A5A99BC02B0A2EA26572 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAA5E771F744A08FE4E19FEE /* libPods-FaceDetector.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E29891E2749AEC0CE18F7E48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F42C430F97CC9D79ADE3BB7 /* Pods-FaceDetector.debug.xcconfig */,
+				FFCF071C95AFFBEDC5C2B8B7 /* Pods-FaceDetector.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FFCC44F1AF2981800EAF299 /* Build configuration list for PBXNativeTarget "FaceDetector" */;
 			buildPhases = (
+				2398606FF0F095A1BC10D8CE /* Check Pods Manifest.lock */,
 				5FFCC4281AF2981800EAF299 /* Sources */,
 				5FFCC4291AF2981800EAF299 /* Frameworks */,
 				5FFCC42A1AF2981800EAF299 /* Resources */,
+				3AB235A649A751D8D7CEE7CC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +237,7 @@
 			files = (
 				5FFCC43B1AF2981800EAF299 /* Main.storyboard in Resources */,
 				5FFCC4401AF2981800EAF299 /* LaunchScreen.xib in Resources */,
+				5FFCC4591AF2A8ED00EAF299 /* haarcascade_frontalface_default.xml in Resources */,
 				5FFCC43D1AF2981800EAF299 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,13 +251,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2398606FF0F095A1BC10D8CE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3AB235A649A751D8D7CEE7CC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceDetector/Pods-FaceDetector-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5FFCC4281AF2981800EAF299 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FFCC4381AF2981800EAF299 /* ViewController.m in Sources */,
-				5FFCC4351AF2981800EAF299 /* AppDelegate.m in Sources */,
+				5FFCC45C1AF2A8FC00EAF299 /* UIImage+OpenCV.mm in Sources */,
+				5FFCC4381AF2981800EAF299 /* ViewController.mm in Sources */,
+				5FFCC4351AF2981800EAF299 /* AppDelegate.mm in Sources */,
 				5FFCC4321AF2981800EAF299 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,21 +416,33 @@
 		};
 		5FFCC4501AF2981800EAF299 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F42C430F97CC9D79ADE3BB7 /* Pods-FaceDetector.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FaceDetector/FaceDetector-Prefix.pch";
 				INFOPLIST_FILE = FaceDetector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
 		5FFCC4511AF2981800EAF299 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFCF071C95AFFBEDC5C2B8B7 /* Pods-FaceDetector.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FaceDetector/FaceDetector-Prefix.pch";
 				INFOPLIST_FILE = FaceDetector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
@@ -416,6 +499,7 @@
 				5FFCC4511AF2981800EAF299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5FFCC4521AF2981800EAF299 /* Build configuration list for PBXNativeTarget "FaceDetectorTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +508,7 @@
 				5FFCC4541AF2981800EAF299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
