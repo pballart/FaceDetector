@@ -16,11 +16,6 @@
 #import "UIImage+OpenCV.h"
 #import <AVFoundation/AVFoundation.h>
 
-// Name of face cascade resource file without xml extension
-NSString * const kFaceCascadeFilename = @"haarcascade_frontalface_default";
-
-// Options for cv::CascadeClassifier::detectMultiScale
-const int kHaarOptions =  CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 
 @interface ViewController () <AVCaptureVideoDataOutputSampleBufferDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -30,9 +25,43 @@ const int kHaarOptions =  CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 @property (nonatomic, assign) NSInteger camera;
 @property (nonatomic, assign) cv::CascadeClassifier faceCascade;
+
 @end
 
 @implementation ViewController
+
+
+-(CGFloat)scaleFactor
+{
+    if (!_scaleFactor) {
+        _scaleFactor = 1.3;
+    }
+    return _scaleFactor;
+}
+
+-(int)minNeighbors
+{
+    if (!_minNeighbors) {
+        _minNeighbors = 3;
+    }
+    return _minNeighbors;
+}
+
+-(int)minSize
+{
+    if (!_minSize) {
+        _minSize = 30;
+    }
+    return _minSize;
+}
+
+-(NSString *)cascadeName
+{
+    if (!_cascadeName) {
+        _cascadeName = @"haarcascade_frontalface_default";
+    }
+    return _cascadeName;
+}
 
 #pragma mark - View lifecycle
 
@@ -60,7 +89,7 @@ const int kHaarOptions =  CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 
     [self startWithDevicePosition:AVCaptureDevicePositionBack];
     // Load the face Haar cascade from resources
-    NSString *faceCascadePath = [[NSBundle mainBundle] pathForResource:kFaceCascadeFilename ofType:@"xml"];
+    NSString *faceCascadePath = [[NSBundle mainBundle] pathForResource:self.cascadeName ofType:@"xml"];
     
     self.faceCascade = cv::CascadeClassifier([faceCascadePath UTF8String]);
     if (!self.faceCascade.load([faceCascadePath UTF8String])) {
@@ -68,6 +97,7 @@ const int kHaarOptions =  CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     }
 
 }
+
 
 - (void)dealloc {
     [self.captureSession stopRunning];
@@ -214,7 +244,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     // Detect faces
     std::vector<cv::Rect> faces;
     
-    self.faceCascade.detectMultiScale(mat, faces, 1.3, 2, kHaarOptions, cv::Size(30, 30));
+    self.faceCascade.detectMultiScale(mat, faces, self.scaleFactor, self.minNeighbors, CV_HAAR_SCALE_IMAGE, cv::Size(self.minSize, self.minSize));
     
     // Dispatch updating of face markers to main queue
     dispatch_sync(dispatch_get_main_queue(), ^{
@@ -380,5 +410,8 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     }
 }
 
+- (IBAction)settingsPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

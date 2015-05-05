@@ -15,6 +15,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+@property (nonatomic, assign) CGFloat scaleFactor;
+@property (nonatomic, assign) int minNeighbors;
+@property (nonatomic, assign) int minSize;
+@property (nonatomic, strong) NSString *cascadeName;
 @end
 
